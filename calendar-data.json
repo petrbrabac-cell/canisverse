@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11",
-  "coverage": "První sada: KCHJ 2027 a oznámená pracovní zkouška WUT. Nejde o úplný kalendář.",
+  "updated": "2026-11-13",
+  "coverage": "Výběr akcí: KCHJ 2027, oznámená pracovní zkouška WUT a World Dog Show 2027 v Tullnu. Nejde o úplný kalendář.",
   "events": [
     {
       "id": "kchj-show-0",
@@ -337,6 +337,22 @@
       "deadline": null,
       "judge": null,
       "notes": "Termín oznámen v zápisu WUT zveřejněném KCHJ. Přesné místo, podmínky, přihlašování a propozice zatím neověřeny. Pokládání stop je uvedeno 7. 5.; zkouška 8. 5."
+    },
+    {
+      "id": "wds-tulln-2027",
+      "start": "2027-05-27",
+      "end": "2027-05-30",
+      "city": "Tulln an der Donau – Messe Tulln",
+      "title": "World Dog Show 2027",
+      "type": "show",
+      "country": "AT",
+      "breed": "Všechna plemena FCI",
+      "status": "verified",
+      "source": "https://www.onlinedogshows.eu/de/Show/Index/5822",
+      "checked": "2026-11-13",
+      "deadline": "2027-04-27",
+      "judge": "Jezevčíci 27. 5.: hladkosrstí králičí a standardní Gabor Korozs; hladkosrstí trpasličí a dlouhosrstí standardní Masa Siroka; dlouhosrstí králičí a trpasličí Barbara Herczeg; drsnosrstí králičí a trpasličí Jeff Horswell; drsnosrstí standardní Caroline Geerts.",
+      "notes": "WDS 27.–30. 5. 2027: skupiny I/IV/VI 27. 5.; III/VII/VIII 28. 5.; II/X 29. 5.; V/IX 30. 5. Všech devět variet jezevčíků 27. 5. Uzávěrky 25. 1., 25. 2., 25. 3. a 27. 4. 2027. Přihlašování WDS otevřeno podle oznámení pořadatele 13. 11. 2026. Sazby mladí/dospělí 120/135/155/175 EUR; minor puppy, puppy a veteráni 88/92/96/100 EUR. Změny rozhodčích vyhrazeny. Samostatná Austrian Winner 26. 5. není součástí tohoto záznamu. Oficiální web https://www.wds2027.at/"
     }
   ],
   "pending": [
