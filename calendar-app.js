@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const data=window.CANISVERSE_CALENDAR, events=data.events;
-  const $=s=>document.getElementById(s), types={show:'Výstava',trial:'Pracovní zkouška',breeding:'Bonitace'}, countries={CZ:'Česko',AT:'Rakousko',SK:'Slovensko',PL:'Polsko',DE:'Německo'};
+  const $=s=>document.getElementById(s), types={show:'Výstava',trial:'Pracovní zkouška',breeding:'Bonitace'}, countries={CZ:'Česko',AT:'Rakousko',SK:'Slovensko',PL:'Polsko',DE:'Německo',IE:'Irsko',CH:'Švýcarsko',NL:'Nizozemsko',HR:'Chorvatsko',PT:'Portugalsko',BA:'Bosna a Hercegovina',BE:'Belgie',ES:'Španělsko',SI:'Slovinsko',FR:'Francie'};
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const day=s=>new Date(s+'T12:00:00Z');
@@ -12,7 +12,7 @@
   const nextDay=s=>{const d=day(s);d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10).replaceAll('-','')};
   const icsEscape=s=>String(s).replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/;/g,'\\;').replace(/,/g,'\\,');
   const fold=line=>{let out='',part='',len=0;for(const c of line){const n=new TextEncoder().encode(c).length;if(len+n>75){out+=part+'\r\n';part=' ';len=1}part+=c;len+=n}return out+part};
-  function ics(items){return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//CANISVERSE//Calendar//CS','CALSCALE:GREGORIAN',...items.flatMap(e=>['BEGIN:VEVENT','UID:'+e.id+'@canisverse.com','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,''),'DTSTART;VALUE=DATE:'+e.start.replaceAll('-',''),'DTEND;VALUE=DATE:'+nextDay(e.end),'SUMMARY:'+icsEscape(e.title),'LOCATION:'+icsEscape(e.city+', '+(countries[e.country]||e.country)),'DESCRIPTION:'+icsEscape((e.status==='announced'?'Oznámený termín; propozice ověřit. ':'')+(e.notes||'')+'\nZdroj: '+e.source+'\nKontrola: '+e.checked),'URL:'+e.source,'END:VEVENT']),'END:VCALENDAR'].map(fold).join('\r\n')+'\r\n'}
+  function ics(items){return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//CANISVERSE//Calendar//CS','CALSCALE:GREGORIAN',...items.flatMap(e=>['BEGIN:VEVENT','UID:'+e.id+'@canisverse.com','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,''),'DTSTART;VALUE=DATE:'+e.start.replaceAll('-',''),'DTEND;VALUE=DATE:'+nextDay(e.end),'SUMMARY:'+icsEscape(e.title),'LOCATION:'+icsEscape(e.city+', '+(countries[e.country]||e.country)),'DESCRIPTION:'+icsEscape((e.status==='announced'?'Oznámený termín; propozice ověřit. ':'')+(e.notes||'')+'\nPropozice: '+(e.propositions||e.source)+(e.documents?.length?'\nPDF propozice: '+e.documents.map(d=>d.url).join(' '):'')+'\nZdroj: '+e.source+'\nKontrola: '+e.checked),'URL:'+e.source,'END:VEVENT']),'END:VCALENDAR'].map(fold).join('\r\n')+'\r\n'}
   // Pure helpers are also used by the local verification script.
   if(typeof module!=='undefined')module.exports={filter,shiftMonth,ics,nextDay,norm};
   if(typeof document==='undefined')return;
@@ -31,7 +31,7 @@
     $('count').textContent=`Zobrazeno ${items.length} z ${events.length} akcí${mode==='month'?' • export zahrnuje tento měsíc':''}.`;
     $('export').disabled=!items.length;
     if(mode==='list'){
-      $('results').innerHTML=items.length?'<div class="rows">'+items.map(e=>`<article class="row"><time datetime="${e.start}">${fmt(e.start)}</time><div><span class="pill ${e.type}">${types[e.type]}</span>${e.status==='announced'?'<span class="pill warn">Oznámeno</span>':''}<h3>${esc(e.title)}</h3><p class="meta">${esc(e.city)} · ${esc(countries[e.country]||e.country)} · ${esc(e.breed)}</p><p class="meta">${e.deadline?'Uzávěrka '+fmt(e.deadline):'Uzávěrka neuvedena'} · Kontrola ${fmt(e.checked)}</p></div><button data-id="${esc(e.id)}">Detail akce →</button></article>`).join('')+'</div>':'<p class="empty">Pro tento výběr zatím nemáme žádnou akci. Zkuste zrušit filtry.</p>';
+      $('results').innerHTML=items.length?'<div class="rows">'+items.map(e=>`<article class="row"><time datetime="${e.start}">${fmt(e.start)}</time><div><span class="pill ${e.type}">${types[e.type]}</span>${e.status==='announced'?'<span class="pill warn">Oznámeno</span>':''}<h3>${esc(e.title)}</h3><p class="meta">${esc(e.city)} · ${esc(countries[e.country]||e.country)} · ${esc(e.breed)}</p><p class="meta">${e.deadline?'Uzávěrka '+fmt(e.deadline):'Uzávěrka neuvedena'} · Kontrola ${fmt(e.checked)}</p></div><div><button data-id="${esc(e.id)}">Detail akce →</button>${e.propositions?`<br><a href="${esc(e.propositions)}" target="_blank" rel="noopener noreferrer">Propozice / informace ↗</a>`:''}</div></article>`).join('')+'</div>':'<p class="empty">Pro tento výběr zatím nemáme žádnou akci. Zkuste zrušit filtry.</p>';
     }else{
       const first=day(current+'-01'),offset=(first.getUTCDay()+6)%7,days=new Date(Date.UTC(first.getUTCFullYear(),first.getUTCMonth()+1,0)).getUTCDate();
       let html=['Po','Út','St','Čt','Pá','So','Ne'].map(d=>`<div class="weekday">${d}</div>`).join('');
@@ -43,8 +43,8 @@
     }
   }
   function detail(id){const e=events.find(x=>x.id===id);if(!e)return;returnFocus=document.activeElement;
-    const rows=[['Datum',fmt(e.start)],['Místo',e.city+' · '+(countries[e.country]||e.country)],['Plemeno',e.breed],['Stav',e.status==='announced'?'Oznámeno v zápisu; propozice neověřeny':'Termín zveřejněný klubem'],['Uzávěrka',e.deadline?fmt(e.deadline):'Pořadatel zatím neuvedl / nezjištěna'],['Rozhodčí / komise',e.judge||'Zatím neuvedeni'],['Kontrola',fmt(e.checked)]];
-    $('detailcontent').innerHTML=`<span class="pill ${e.type}">${types[e.type]}</span><h2 id="detailtitle">${esc(e.title)}</h2><dl>${rows.map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join('')}</dl>${e.notes?'<p>'+esc(e.notes)+'</p>':''}<p><a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Informace pořadatele / původní zdroj ↗</a></p><p class="meta">Podmínky účasti a případné změny ověřte v aktuálních propozicích.</p>`;$('detail').showModal();
+    const rows=[['Datum',fmt(e.start)+(e.end!==e.start?' – '+fmt(e.end):'')],['Místo',e.city+' · '+(countries[e.country]||e.country)],['Plemeno',e.breed],...(e.venue?[['Areál',e.venue]]:[]),...(e.registrationStatus?[['Přihlašování',e.registrationStatus]]:[]),['Stav',e.status==='announced'?'Oznámený termín':e.status==='listed'?'Termín ze seznamu; obsah propozic neověřen':'Termín zveřejněný pořadatelem'],['Uzávěrka',e.deadline?fmt(e.deadline):'Pořadatel zatím neuvedl / nezjištěna'],['Rozhodčí / komise',e.judge||'Zatím neuvedeni'],['Kontrola',fmt(e.checked)]];
+    $('detailcontent').innerHTML=`<span class="pill ${e.type}">${types[e.type]}</span><h2 id="detailtitle">${esc(e.title)}</h2><dl>${rows.map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join('')}</dl>${e.notes?'<p>'+esc(e.notes)+'</p>':''}<p><a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Informace pořadatele / původní zdroj ↗</a></p>${e.propositions?`<p><a href="${esc(e.propositions)}" target="_blank" rel="noopener noreferrer">Propozice a informace k výstavě ↗</a></p>`:''}${(e.documents||[]).map(d=>`<p><a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">PDF propozice: ${esc(d.label)} ↗</a></p>`).join('')}<p class="meta">Podmínky účasti a případné změny ověřte v aktuálních propozicích.</p>`;$('detail').showModal();
   }
   $('results').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)detail(b.dataset.id)});
   $('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>returnFocus?.focus());
