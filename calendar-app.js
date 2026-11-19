@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const data=window.CANISVERSE_CALENDAR, events=data.events;
-  const $=s=>document.getElementById(s), types={show:'Výstava',trial:'Pracovní zkouška',breeding:'Bonitace'}, countries={CZ:'Česko',AT:'Rakousko',SK:'Slovensko',PL:'Polsko',DE:'Německo',IE:'Irsko',CH:'Švýcarsko',NL:'Nizozemsko',HR:'Chorvatsko',PT:'Portugalsko',BA:'Bosna a Hercegovina',BE:'Belgie',ES:'Španělsko',SI:'Slovinsko',FR:'Francie'};
+  const $=s=>document.getElementById(s), types={show:'Výstava',trial:'Pracovní zkouška',breeding:'Bonitace'}, countries={CZ:'Česko',AT:'Rakousko',SK:'Slovensko',PL:'Polsko',HU:'Maďarsko',DE:'Německo',IE:'Irsko',CH:'Švýcarsko',NL:'Nizozemsko',HR:'Chorvatsko',PT:'Portugalsko',BA:'Bosna a Hercegovina',BE:'Belgie',ES:'Španělsko',SI:'Slovinsko',FR:'Francie'};
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const day=s=>new Date(s+'T12:00:00Z');
