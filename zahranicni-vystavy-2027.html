@@ -1092,6 +1092,8 @@ th,td{padding:9px 12px;vertical-align:top;border-bottom:1px solid var(--line)}th
   const events = JSON.parse(byId('calendar-data').textContent);
   const fields = ['country', 'year', 'query'].map(byId);
   const [country, year, query] = fields;
+  const requestedCountry = new URLSearchParams(window.location.search).get('zeme');
+  if (Object.hasOwn(labels, requestedCountry)) country.value = requestedCountry;
   const format = new Intl.DateTimeFormat('cs-CZ', { timeZone: 'UTC' });
   const date = value => format.format(new Date(value + 'T12:00:00Z'));
   const normalize = text => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/ł/g, 'l');
