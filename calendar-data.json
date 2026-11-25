@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19",
-  "coverage": "KCHJ a WUT 2027, WDS 2027 a všech 61 položek aktuálního seznamu OnlineDogShows (kontrola 14. 11. 2026). Vícedenní balíčky nejsou automaticky rozděleny na jednotlivé výstavy. U 16 položek nebyl obsah propozic načten; přímý odkaz ze seznamu je zachován. Nejde o úplný evropský kalendář. Doplněno Slovensko: NITRADOG Christmas Cup 2026 a všech 8 výstavních bloků kalendáře SKJ 2027. U roku 2027 jsou ověřeny zveřejněné termíny; propozice, uzávěrky a rozhodčí se ověřují samostatně. Doplněno Polsko: 45 zveřejněných výstavních položek na rok 2027 podle kalendáře ZKwP a pořadatelů. Doplněno Maďarsko: 33 termínů CACIB a jeden klubový program na rok 2027 podle FCI a MEOESZ.",
+  "updated": "2026-11-25",
+  "coverage": "KCHJ a WUT 2027, WDS 2027 a všech 61 položek aktuálního seznamu OnlineDogShows (kontrola 14. 11. 2026). Vícedenní balíčky nejsou automaticky rozděleny na jednotlivé výstavy. U 16 položek nebyl obsah propozic načten; přímý odkaz ze seznamu je zachován. Nejde o úplný evropský kalendář. Doplněno Slovensko: NITRADOG Christmas Cup 2026 a všech 8 výstavních bloků kalendáře SKJ 2027. U roku 2027 jsou ověřeny zveřejněné termíny; propozice, uzávěrky a rozhodčí se ověřují samostatně. Doplněno Polsko: 45 zveřejněných výstavních položek na rok 2027 podle kalendáře ZKwP a pořadatelů. Doplněno Maďarsko: 33 termínů CACIB a jeden klubový program na rok 2027 podle FCI a MEOESZ. Doplněno Česko: Vánočka a tři prosincové výstavy TrioCACIB Praha 2026 podle ČMKU.",
   "events": [
     {
       "id": "ods-5245",
@@ -483,6 +483,40 @@
       "sourceList": "https://www.onlinedogshows.eu/en/Home/Index"
     },
     {
+      "id": "cmku-27766",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "city": "Brno",
+      "title": "Národní výstava psů – Vánočka",
+      "type": "show",
+      "country": "CZ",
+      "breed": "Všechna plemena / dle rozpisu",
+      "status": "verified",
+      "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27766",
+      "checked": "2026-11-25",
+      "deadline": null,
+      "judge": null,
+      "venue": "Výstaviště Brno (BVV)",
+      "notes": "Jezevčíci (FCI IV) se posuzují v neděli 29. 11."
+    },
+    {
+      "id": "cmku-27813",
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "city": "Praha",
+      "title": "TrioCACIB Prague Expo Dog – pátek",
+      "type": "show",
+      "country": "CZ",
+      "breed": "Všechna plemena / dle rozpisu",
+      "status": "verified",
+      "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27813",
+      "checked": "2026-11-25",
+      "deadline": null,
+      "judge": null,
+      "venue": "PVA EXPO PRAHA, Letňany",
+      "notes": "Mezinárodní výstava CACIB."
+    },
+    {
       "id": "ods-5800",
       "start": "2026-12-05",
       "end": "2026-12-05",
@@ -555,6 +589,23 @@
       "sourceList": "https://www.onlinedogshows.eu/en/Home/Index"
     },
     {
+      "id": "cmku-27814",
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "city": "Praha",
+      "title": "TrioCACIB Prague Expo Dog – sobota",
+      "type": "show",
+      "country": "CZ",
+      "breed": "Všechna plemena / dle rozpisu",
+      "status": "verified",
+      "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27814",
+      "checked": "2026-11-25",
+      "deadline": null,
+      "judge": null,
+      "venue": "PVA EXPO PRAHA, Letňany",
+      "notes": "Mezinárodní výstava CACIB."
+    },
+    {
       "id": "ods-5722",
       "start": "2026-12-06",
       "end": "2026-12-06",
@@ -601,6 +652,23 @@
       "registrationStatus": "Final deadline on: 2026-11-29 22:59 | Current prices valid until 2026-11-15 22:59 +5.00",
       "sourceShowId": "5967",
       "sourceList": "https://www.onlinedogshows.eu/en/Home/Index"
+    },
+    {
+      "id": "cmku-27815",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "city": "Praha",
+      "title": "TrioCACIB Prague Expo Dog – neděle",
+      "type": "show",
+      "country": "CZ",
+      "breed": "Všechna plemena / dle rozpisu",
+      "status": "verified",
+      "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27815",
+      "checked": "2026-11-25",
+      "deadline": null,
+      "judge": null,
+      "venue": "PVA EXPO PRAHA, Letňany",
+      "notes": "Mezinárodní výstava CACIB."
     },
     {
       "id": "ods-5444",
