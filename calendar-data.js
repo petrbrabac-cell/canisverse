@@ -497,7 +497,7 @@ window.CANISVERSE_CALENDAR = {
       "deadline": null,
       "judge": null,
       "venue": "Výstaviště Brno (BVV)",
-      "notes": "Jezevčíci (FCI IV) se posuzují v neděli 29. 11."
+      "notes": "Jezevčíci (FCI IV) se podle propozic ČMKU posuzují v sobotu 28. 11. 2026."
     },
     {
       "id": "cmku-27813",
