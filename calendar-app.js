@@ -1,14 +1,14 @@
 (() => {
   'use strict';
   const data=window.CANISVERSE_CALENDAR, events=data.events;
-  const $=s=>document.getElementById(s), types={show:'Výstava',trial:'Pracovní zkouška',breeding:'Bonitace'}, countries={CZ:'Česko',AT:'Rakousko',SK:'Slovensko',PL:'Polsko',HU:'Maďarsko',DE:'Německo',IE:'Irsko',CH:'Švýcarsko',NL:'Nizozemsko',HR:'Chorvatsko',PT:'Portugalsko',BA:'Bosna a Hercegovina',BE:'Belgie',ES:'Španělsko',SI:'Slovinsko',FR:'Francie'};
+  const $=s=>document.getElementById(s), types={show:'Výstava',trial:'Pracovní zkouška',breeding:'Bonitace',svod:'Svod'}, countries={CZ:'Česko',AT:'Rakousko',SK:'Slovensko',PL:'Polsko',HU:'Maďarsko',DE:'Německo',IE:'Irsko',CH:'Švýcarsko',NL:'Nizozemsko',HR:'Chorvatsko',PT:'Portugalsko',BA:'Bosna a Hercegovina',BE:'Belgie',ES:'Španělsko',SI:'Slovinsko',FR:'Francie'};
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const day=s=>new Date(s+'T12:00:00Z');
   const fmt=s=>day(s).toLocaleDateString('cs-CZ',{timeZone:'UTC'});
   const monthKey=d=>d.slice(0,7);
   const shiftMonth=(s,n)=>{const d=day(s+'-01');d.setUTCMonth(d.getUTCMonth()+n);return d.toISOString().slice(0,7)};
-  const filter=(items,f)=>items.filter(e=>(!f.type||e.type===f.type)&&(!f.country||e.country===f.country)&&(!f.breed||e.breed===f.breed)&&(!f.year||e.start.slice(0,4)===f.year)&&norm([e.title,e.city,e.judge,e.notes].join(' ')).includes(norm(f.query||'')));
+  const filter=(items,f)=>items.filter(e=>(!f.type||e.type===f.type)&&(!f.country||e.country===f.country)&&(!f.breed||e.breed===f.breed)&&(!f.year||e.start.slice(0,4)===f.year)&&norm([e.title,e.city,e.judge,e.notes,e.organizer].join(' ')).includes(norm(f.query||'')));
   const nextDay=s=>{const d=day(s);d.setUTCDate(d.getUTCDate()+1);return d.toISOString().slice(0,10).replaceAll('-','')};
   const icsEscape=s=>String(s).replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/;/g,'\\;').replace(/,/g,'\\,');
   const fold=line=>{let out='',part='',len=0;for(const c of line){const n=new TextEncoder().encode(c).length;if(len+n>75){out+=part+'\r\n';part=' ';len=1}part+=c;len+=n}return out+part};
@@ -19,7 +19,7 @@
   let mode='list', current=monthKey(events.slice().sort((a,b)=>a.start.localeCompare(b.start))[0].start),returnFocus=null;
   function options(id,vals,label=x=>x){for(const v of [...new Set(vals)].sort()){const o=document.createElement('option');o.value=v;o.textContent=label(v);$(id).append(o)}}
   options('country',events.map(e=>e.country),x=>countries[x]||x); options('breed',events.map(e=>e.breed));options('year',events.map(e=>e.start.slice(0,4)));
-  $('stats').innerHTML=Object.entries(types).map(([key,name])=>`<span><b>${events.filter(e=>e.type===key).length}</b> ${key==='show'?'výstav':key==='trial'?'pracovní zkouška':'bonitací'}</span>`).join('');
+  $('stats').innerHTML=Object.entries(types).map(([key,name])=>`<span><b>${events.filter(e=>e.type===key).length}</b> ${key==='show'?'výstav':key==='trial'?'pracovních zkoušek':key==='svod'?'svodů':'bonitací'}</span>`).join('');
   $('coverage').textContent=data.coverage;
   $('pending').innerHTML='<h2>K ověření</h2>'+data.pending.map(p=>`<h3>${esc(p.title)}</h3><p>${esc(p.note)}</p><p>${p.sources.map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">Zdroj ${i+1} ↗</a>`).join(' · ')}</p>`).join('');
   const values=()=>Object.fromEntries(['query','type','country','breed','year'].map(k=>[k,$(k).value]));
@@ -44,7 +44,7 @@
   }
   function detail(id){const e=events.find(x=>x.id===id);if(!e)return;returnFocus=document.activeElement;
     const rows=[['Datum',fmt(e.start)+(e.end!==e.start?' – '+fmt(e.end):'')],['Místo',e.city+' · '+(countries[e.country]||e.country)],['Plemeno',e.breed],...(e.venue?[['Areál',e.venue]]:[]),...(e.registrationStatus?[['Přihlašování',e.registrationStatus]]:[]),['Stav',e.status==='announced'?'Oznámený termín':e.status==='listed'?'Termín ze seznamu; obsah propozic neověřen':'Termín zveřejněný pořadatelem'],['Uzávěrka',e.deadline?fmt(e.deadline):'Pořadatel zatím neuvedl / nezjištěna'],['Rozhodčí / komise',e.judge||'Zatím neuvedeni'],['Kontrola',fmt(e.checked)]];
-    $('detailcontent').innerHTML=`<span class="pill ${e.type}">${types[e.type]}</span><h2 id="detailtitle">${esc(e.title)}</h2><dl>${rows.map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join('')}</dl>${e.notes?'<p>'+esc(e.notes)+'</p>':''}<p><a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Informace pořadatele / původní zdroj ↗</a></p>${e.propositions?`<p><a href="${esc(e.propositions)}" target="_blank" rel="noopener noreferrer">Propozice a informace k výstavě ↗</a></p>`:''}${(e.documents||[]).map(d=>`<p><a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">PDF propozice: ${esc(d.label)} ↗</a></p>`).join('')}<p class="meta">Podmínky účasti a případné změny ověřte v aktuálních propozicích.</p>`;$('detail').showModal();
+    $('detailcontent').innerHTML=`<span class="pill ${e.type}">${types[e.type]}</span><h2 id="detailtitle">${esc(e.title)}</h2><dl>${rows.map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join('')}</dl>${e.notes?'<p>'+esc(e.notes)+'</p>':''}<p><a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">Informace pořadatele / původní zdroj ↗</a></p>${e.propositions?`<p><a href="${esc(e.propositions)}" target="_blank" rel="noopener noreferrer">Propozice a informace k akci ↗</a></p>`:''}${(e.documents||[]).map(d=>`<p><a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">PDF propozice: ${esc(d.label)} ↗</a></p>`).join('')}<p class="meta">Podmínky účasti a případné změny ověřte v aktuálních propozicích.</p>`;$('detail').showModal();
   }
   $('results').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(b)detail(b.dataset.id)});
   $('close').onclick=()=>$('detail').close();$('detail').addEventListener('close',()=>returnFocus?.focus());
