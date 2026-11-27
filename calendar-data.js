@@ -493,11 +493,13 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Všechna plemena / dle rozpisu",
       "status": "verified",
       "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27766",
-      "checked": "2026-11-25",
-      "deadline": null,
-      "judge": null,
+      "checked": "2026-11-27",
+      "deadline": "2026-11-16",
+      "judge": "Vojtěch Svoboda — jezevčík (všech 9 variet)",
       "venue": "Výstaviště Brno (BVV)",
-      "notes": "Jezevčíci (FCI IV) se podle propozic ČMKU posuzují v sobotu 28. 11. 2026."
+      "notes": "Jezevčíci (FCI IV) se podle propozic ČMKU posuzují v sobotu 28. 11. 2026. Aktuální rozpis ČMKU uvádí Vojtěcha Svobodu pro všech devět variet jezevčíka.",
+      "judgeSource": "https://cmkuvystavy.cz/rozhodci/36",
+      "registrationStatus": "Uzávěrka 16. 11. 2026 proběhla; přihlášky uzavřeny."
     },
     {
       "id": "cmku-27813",
@@ -1233,10 +1235,19 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": "2026-12-30",
-      "judge": "Dalibor Smékal – hladkosrstí a drsnosrstí králičí a trpasličí",
-      "notes": "Ostatní variety: Pawel Osak, Martin Fik a Anna Kozlowska podle rozpisu pořadatele."
+      "judge": "Pawel Osak (standardní hladkosrstí a dlouhosrstí); Martin Fik (standardní drsnosrstí); Dalibor Smékal (trpasličí a králičí hladkosrstí a drsnosrstí); Anna Kozlowska (trpasličí a králičí dlouhosrstí)",
+      "notes": "Program: přejímka 8:00–9:00; zahájení 9:00; posuzování 9:30–14:00; výběr do chovu přibližně od 10:00; soutěže 14:30–16:00. Poplatky za prvního psa: 1 000 Kč nečlen / 800 Kč člen / 40 € zahraniční; další pes: 910 / 710 / 35 €. Štěňata, dorost, čestná a veteráni: 600 / 400 / 25 €. Pořadatel si vyhrazuje změnu rozhodčích a přerozdělení po uzávěrce.",
+      "judgeSource": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
+      "registrationStatus": "Přihlašování online přes DogOffice",
+      "registrationUrl": "https://www.dogoffice.cz/",
+      "documents": [
+        {
+          "label": "Propozice Kroměříž 2027",
+          "url": "https://3fd632ab1a.clvaw-cdnwnd.com/23866f2b46000a4f0561e998de1fd998/200014432-b75c8b75ca/2027_sv_kromeriz_propozice-2.pdf?ph=3fd632ab1a"
+        }
+      ]
     },
     {
       "id": "hu-2027-02-05-budapest",
@@ -1694,10 +1705,13 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
-      "judge": null,
-      "notes": ""
+      "judge": "Jan Coufal — standardní jezevčíci; Miloš Kašpar — miniaturní jezevčíci",
+      "notes": "Rozhodčí jsou uvedeni na stránce pořadatele; uzávěrka ani propozice v kontrolovaném zdroji zatím zveřejněny nejsou.",
+      "judgeSource": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
+      "registrationStatus": "Přihlašování přes DogOffice; uzávěrka zatím nezveřejněna",
+      "registrationUrl": "https://www.dogoffice.cz/"
     },
     {
       "id": "cmku-28352",
@@ -3069,7 +3083,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -3274,7 +3288,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -3348,7 +3362,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -3962,7 +3976,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -4209,7 +4223,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -4506,7 +4520,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -5676,7 +5690,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -6416,7 +6430,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
@@ -6498,7 +6512,7 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Jezevčík",
       "status": "verified",
       "source": "https://kchj2.webnode.cz/klubove-vystavy-2027/",
-      "checked": "2026-11-11",
+      "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
       "notes": ""
