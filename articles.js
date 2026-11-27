@@ -83,7 +83,7 @@ window.CANISVERSE_ARTICLES = [
 ,
 {
   "id": "CV-VANOCKA-BRNO-2026-PREVIEW",
-  "title": "Vánočka 2026: jezevčíci nastoupí v sobotu v kruhu 12",
+  "title": "Vánočka 2026: přihlášeno je 114 jezevčíků",
   "category": "Výstavy a kalendář",
   "topic": "shows",
   "breed": "dachshund",
@@ -91,12 +91,12 @@ window.CANISVERSE_ARTICLES = [
   "publishedAt": "2026-11-27",
   "checkedAt": "2026-11-27",
   "expiresAt": "2026-11-30",
-  "summary": "Vánoční národní výstava v Brně začíná v sobotu 28. listopadu. Jezevčíci se představí v kruhu 12. Předběžný údaj o letošním počtu se liší od právě zveřejněného harmonogramu ČMKU.",
+  "summary": "Na letošní Vánočku je přihlášeno 114 jezevčíků: 43 psů a 71 fen. Jezevčíci se představí v sobotu v kruhu 12.",
   "body": [
     "Vánoční národní výstava psů se koná 28. a 29. listopadu na brněnském výstavišti BVV. Pro návštěvníky je otevřeno oba dny od 8 do 16 hodin. Základní vstupné stojí 150 Kč, zlevněné 80 Kč; děti do šesti let mají vstup zdarma.",
     "Jezevčíci FCI IV nastoupí v sobotu 28. listopadu v kruhu 12. Časový rozpis ČMKU uvádí začátek posuzování v 9:00 a rozhodčího Vojtěcha Svobodu. Jde o plánovaný začátek kruhu, proto se vyplatí sledovat případná oznámení pořadatele.",
-    "Pro letošní ročník máme před vydáním údaj 115 přihlášených jezevčíků. Časový rozpis ČMKU však nyní vypisuje katalogová čísla 880 až 993, tedy 114 položek. Rozdíl zatím neumíme nezávisle vysvětlit; konečný počet ověříme podle minikatalogu, který má ČMKU zveřejnit ráno v den výstavy.",
-    "Srovnání dostupných přehledů ukazuje, že v roce 2024 ČMKU uváděla pro FCI skupinu IV 129 jedinců a v roce 2025 rozpis kruhů evidoval 143 jezevčíků. Letošní oficiální časový rozpis zatím odpovídá 114 položkám, předběžný údaj 115 by znamenal zhruba 20% pokles oproti loňsku. Jde o počty z rozpisů a přehledů přihlášených, nikoli o počet psů, kteří skutečně nastoupí do kruhu.",
+    "V DogOffice je pro letošní ročník přihlášeno 114 jezevčíků: 43 psů a 71 fen. Stejnému součtu odpovídá i zveřejněný časový rozpis ČMKU. Jde o počet přihlášených; skutečný počet nastoupivších psů se může lišit.",
+    "Srovnání dostupných přehledů ukazuje, že v roce 2024 ČMKU uváděla pro FCI skupinu IV 129 jedinců a v roce 2025 rozpis kruhů evidoval 143 jezevčíků. Letošních 114 přihlášek je o 29 méně než v roce 2025, tedy přibližně o 20 %. Jde o počty z rozpisů a přehledů přihlášených, nikoli o počet psů, kteří skutečně nastoupí do kruhu.",
     "Pořadatel mezitím oznámil změny v rozhodčích. Karel Frank se omluvil; jeho sobotní plemena převezme Dalibor Smékal v kruhu 20 jako poslední podle harmonogramu a nedělní plemena Lenka Frnčová. Už dříve byli nahrazeni také rozhodčí Voláriková Renatou Cepkovou a Šuster Leošem Jančíkem. Tyto změny se týkají přidělených plemen, ne rozhodčího jezevčíků."
   ],
   "source": "https://www.cmkuvystavy.cz/index/22",
