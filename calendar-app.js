@@ -17,7 +17,7 @@
   if(typeof module!=='undefined')module.exports={filter,shiftMonth,ics,nextDay,norm};
   if(typeof document==='undefined')return;
   let mode='list', current=monthKey(events.slice().sort((a,b)=>a.start.localeCompare(b.start))[0].start),returnFocus=null;
-  function options(id,vals,label=x=>x){for(const v of [...new Set(vals)].sort()){const o=document.createElement('option');o.value=v;o.textContent=label(v);$(id).append(o)}}
+  function options(id,vals,label=x=>x){for(const v of [...new Set(vals)].sort()){const o=document.createElement('option');o.value=v;o.textContent=label(v);if(id==='country'&&v==='CZ'){o.defaultSelected=true;o.selected=true}$(id).append(o)}}
   options('country',events.map(e=>e.country),x=>countries[x]||x); options('breed',events.map(e=>e.breed));options('year',events.map(e=>e.start.slice(0,4)));
   $('stats').innerHTML=Object.entries(types).map(([key,name])=>`<span><b>${events.filter(e=>e.type===key).length}</b> ${key==='show'?'výstav':key==='trial'?'pracovních zkoušek':key==='svod'?'svodů':'bonitací'}</span>`).join('');
   $('coverage').textContent=data.coverage;
