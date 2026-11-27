@@ -512,11 +512,16 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Všechna plemena / dle rozpisu",
       "status": "verified",
       "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27813",
-      "checked": "2026-11-25",
-      "deadline": null,
-      "judge": null,
+      "checked": "2026-11-27",
+      "deadline": "2026-11-08",
+      "judge": "Mateo Noel Garrigos — všech 9 rázů jezevčíků FCI IV",
       "venue": "PVA EXPO PRAHA, Letňany",
-      "notes": "Mezinárodní výstava CACIB."
+      "notes": "Rozpis jezevčíků FCI IV podle aktuálního seznamu pořadatele; všech 9 rázů posuzuje uvedený rozhodčí. Uzávěrka přihlášek byla prodloužena do 8. 11. 2026 a je uzavřena.",
+      "judgeSource": "https://www.praguexpodog.cz/rozhodci/",
+      "registrationUrl": "https://dogoffice.cz/office/exhibitions/list/27813",
+      "registrationStatus": "Uzávěrka prodloužena do 8. 11. 2026; přihlašování uzavřeno.",
+      "propositions": "https://www.praguexpodog.cz/informace/",
+      "propositionsStatus": "official_propositions_available"
     },
     {
       "id": "ods-5800",
@@ -601,11 +606,16 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Všechna plemena / dle rozpisu",
       "status": "verified",
       "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27814",
-      "checked": "2026-11-25",
-      "deadline": null,
-      "judge": null,
+      "checked": "2026-11-27",
+      "deadline": "2026-11-08",
+      "judge": "Nicole Kubli — všech 9 rázů jezevčíků FCI IV",
       "venue": "PVA EXPO PRAHA, Letňany",
-      "notes": "Mezinárodní výstava CACIB."
+      "notes": "Rozpis jezevčíků FCI IV podle aktuálního seznamu pořadatele; všech 9 rázů posuzuje uvedený rozhodčí. Uzávěrka přihlášek byla prodloužena do 8. 11. 2026 a je uzavřena.",
+      "judgeSource": "https://www.praguexpodog.cz/rozhodci/",
+      "registrationUrl": "https://dogoffice.cz/office/exhibitions/list/27814",
+      "registrationStatus": "Uzávěrka prodloužena do 8. 11. 2026; přihlašování uzavřeno.",
+      "propositions": "https://www.praguexpodog.cz/informace/",
+      "propositionsStatus": "official_propositions_available"
     },
     {
       "id": "ods-5967",
@@ -666,11 +676,16 @@ window.CANISVERSE_CALENDAR = {
       "breed": "Všechna plemena / dle rozpisu",
       "status": "verified",
       "source": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/27815",
-      "checked": "2026-11-25",
-      "deadline": null,
-      "judge": null,
+      "checked": "2026-11-27",
+      "deadline": "2026-11-08",
+      "judge": "Nico Kersten — všech 9 rázů jezevčíků FCI IV",
       "venue": "PVA EXPO PRAHA, Letňany",
-      "notes": "Mezinárodní výstava CACIB."
+      "notes": "Rozpis jezevčíků FCI IV podle aktuálního seznamu pořadatele; všech 9 rázů posuzuje uvedený rozhodčí. Uzávěrka přihlášek byla prodloužena do 8. 11. 2026 a je uzavřena.",
+      "judgeSource": "https://www.praguexpodog.cz/rozhodci/",
+      "registrationUrl": "https://dogoffice.cz/office/exhibitions/list/27815",
+      "registrationStatus": "Uzávěrka prodloužena do 8. 11. 2026; přihlašování uzavřeno.",
+      "propositions": "https://www.praguexpodog.cz/informace/",
+      "propositionsStatus": "official_propositions_available"
     },
     {
       "id": "ods-5444",
