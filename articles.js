@@ -1,0 +1,83 @@
+window.CANISVERSE_ARTICLES = [
+  {
+    "id": "CV-KCHJ-ZDENEK-DVORAK-20261125",
+    "title": "KCHJ oznámil úmrtí Zdeňka Dvořáka",
+    "category": "Chovatelství a kluby",
+    "topic": "breeding",
+    "breed": "all",
+    "symbol": "Vzpomínka",
+    "publishedAt": "2026-11-27",
+    "checkedAt": "2026-11-26",
+    "summary": "Klub chovatelů jezevčíků ČR oznámil, že ve věku 76 let zemřel Zdeněk Dvořák. Připomněl jeho pomoc při klubových zkouškách v Oboře Volský Žlab a působení rozhodčího.",
+    "body": "Zpráva vychází z oznámení Klubu chovatelů jezevčíků ČR z 25. listopadu. Klub v něm připomíná pomoc Zdeňka Dvořáka při klubových zkouškách v Oboře Volský Žlab i jeho působení rozhodčího.",
+    "source": "https://kchj2.webnode.cz/z-kluboveho-deni/"
+  },
+  {
+    "id": "CV-PRAGUE-ENTRY-PASSES-20261125",
+    "title": "TrioCACIB Praha: pořadatel zpřístupnil vstupní listy v DogOffice",
+    "category": "Výstavy a kalendář",
+    "topic": "shows",
+    "breed": "all",
+    "symbol": "CACIB",
+    "publishedAt": "2026-11-27",
+    "checkedAt": "2026-11-26",
+    "expiresAt": "2026-12-06",
+    "summary": "Vstupní listy na prosincové TrioCACIB jsou podle oznámení pořadatele dostupné v DogOffice. Přihlášení vystavovatelé si mohou zkontrolovat vlastní listy a údaje ve svém účtu.",
+    "body": "Pořadatel oznámil dostupnost vstupních listů pro TrioCACIB Prague Expo Dog, které se koná 4.–6. prosince 2026. Oznámení se týká vstupních listů; neznamená znovuotevření přihlášek. Vstupní list vystavovatele není návštěvnická vstupenka.",
+    "source": "https://www.praguexpodog.cz/"
+  },
+  {
+    "id": "CV-CMKU-PESROKU-SEASON-20261125",
+    "title": "ČMKU: do Psa roku 2026 se ještě počítá pražské TrioCACIB",
+    "category": "Výstavy a výsledky",
+    "topic": "results",
+    "breed": "all",
+    "symbol": "Pes roku",
+    "publishedAt": "2026-11-27",
+    "checkedAt": "2026-11-26",
+    "expiresAt": "2026-12-06",
+    "summary": "Výsledky prosincového TrioCACIB Praha se ještě započítají do soutěže Pes roku 2026. Body do ročníku 2027 se podle poradny ČMKU začnou počítat od lednové národní výstavy.",
+    "body": "Upřesnění zveřejnila ČMKU v poradně. Zpráva nevyhlašuje konečné pořadí ani vítěze soutěže a neprovádí vlastní bodový přepočet.",
+    "source": "https://www.cmku.cz/cz/poradna-157/2"
+  },
+  {
+    "id": "CV-RESULT-CEROC-865-20261121-SATURDAY",
+    "title": "Čerčany: sobotní souhrn CEROC vede Freestyle FOX Royal Fellow",
+    "category": "Výsledky",
+    "topic": "results",
+    "breed": "all",
+    "symbol": "Rally obedience",
+    "publishedAt": "2026-11-27",
+    "checkedAt": "2026-11-25",
+    "summary": "V sobotním souhrnu mezinárodního rally obedience v Čerčanech má Freestyle FOX Royal Fellow s Alenou Smolíkovou první místo v celkovém pořadí dne. Výsledek se týká soboty 21. listopadu, nikoli celého víkendu.",
+    "body": "První dva starty přinesly 88 a 95 bodů. Sobotní výběr výsledků nezaměňujeme za konečné pořadí celého víkendu nebo série CEROC.",
+    "source": "https://akce.obedience.cz/events/865"
+  },
+  {
+    "id": "CV-CMKU-BRNO-CHAMPION-DIPLOMA-20261123",
+    "title": "ČMKU: v Brně půjde vyřídit šampionát i psovi, který nevystavuje",
+    "category": "Výstavy a kalendář",
+    "topic": "shows",
+    "breed": "all",
+    "symbol": "Vánočka · Brno",
+    "publishedAt": "2026-11-27",
+    "checkedAt": "2026-11-24",
+    "expiresAt": "2026-11-29",
+    "summary": "Podle odpovědi v poradně ČMKU bude možné při Vánoční výstavě v Brně vyřídit již splněný šampionát i psovi, který se výstavy neúčastní.",
+    "body": "Jde o administrativní službu pro již splněné podmínky, nikoli o získání nového ocenění. Potřebné doklady, místo, čas a případný poplatek si před cestou ověřte u pořadatele.",
+    "source": "https://www.cmku.cz/cz/poradna-157/8"
+  },
+  {
+    "id": "CV-RESULT-BICHON-27852-20261121",
+    "title": "Loučeň–Jívák: BOB získal Vanilla Kissing Bear van de Dyksteinhoeve",
+    "category": "Výsledky",
+    "topic": "results",
+    "breed": "all",
+    "symbol": "Bišonci",
+    "publishedAt": "2026-11-27",
+    "checkedAt": "2026-11-23",
+    "summary": "Na klubové výstavě bišonků v Loučeni–Jíváku 21. listopadu zvítězil Vanilla Kissing Bear van de Dyksteinhoeve. BOS patřilo feně Jollie Šan-Lí.",
+    "body": "Výsledek, třídy a rozhodčí Jan Zdařil vycházejí z výsledkové tabulky ČMKU. Zpráva popisuje konkrétní klubovou výstavu a její zveřejněné výsledky.",
+    "source": "https://vystavy.cmku.cz/cz/vysledky/vysledky-plemena/27852&skupina=10"
+  }
+];
