@@ -2769,7 +2769,7 @@
       "notes": ""
     },
     {
-      "id": "cmku-28347",
+      "id": "oms-2027-05-16-kutna-hora-vystava-psu-na-zamku-kacina",
       "start": "2027-05-16",
       "end": "2027-05-16",
       "city": "Kutná Hora",
@@ -2782,29 +2782,12 @@
       "checked": "2026-11-27",
       "deadline": null,
       "judge": null,
-      "notes": "Termín a odkaz převzaty z dodaného seznamu ČMKU; podrobnosti a propozice ověřte na odkazu pořadatele.",
+      "notes": "Údaj doplněn podle dodaného seznamu ČMKU; podrobnosti ověřte na odkazu pořadatele. Původní zdroj: https://oms-kh.cz/",
+      "organizer": "OMS Kutná Hora",
+      "venue": "Zámek Kačina",
       "propositions": "https://vystavy.cmku.cz/cz/vystavy/detail-vystavy/28347",
       "propositionsStatus": "listed_link_detail_unchecked",
-      "documents": [],
-      "sourceShowId": "28347",
-      "sourceList": "https://vystavy.cmku.cz/cz/vystavy"
-    },
-    {
-      "id": "oms-2027-05-16-kutna-hora-vystava-psu-na-zamku-kacina",
-      "start": "2027-05-16",
-      "end": "2027-05-16",
-      "city": "Zámek Kačina",
-      "title": "Výstava psů na zámku Kačina",
-      "type": "show",
-      "country": "CZ",
-      "breed": "Dle propozic",
-      "status": "announced",
-      "source": "https://oms-kh.cz/",
-      "checked": "2026-11-25",
-      "deadline": null,
-      "judge": null,
-      "notes": "Pořadatel: OMS Kutná Hora. Zdroj termínu: dodaný plán OMS Kutná Hora. ",
-      "organizer": "OMS Kutná Hora"
+      "sourceShowId": "28347"
     },
     {
       "id": "oms-2027-05-16-pisek-zkousky-vloh-oharu-ii",
