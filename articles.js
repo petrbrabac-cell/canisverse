@@ -118,6 +118,14 @@ window.CANISVERSE_ARTICLES = [
       "url": "https://www.bvv.cz/vystavy-psu/vanocni-narodni-vystava-psu"
     },
     {
+      "label": "DogOffice: statistiky přihlášených",
+      "url": "https://dogoffice.cz/office/exhibitions/list/27766/basic/statistics"
+    },
+    {
+      "label": "ČMKU: harmonogram kruhu 12",
+      "url": "https://www.cmkuvystavy.cz/data/vystavy-nv/36-timetable.pdf"
+    },
+    {
       "label": "ČMKU: fotogalerie z předchozích ročníků",
       "url": "https://www.cmkuvystavy.cz/galerie"
     }
