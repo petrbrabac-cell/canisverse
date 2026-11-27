@@ -4,7 +4,7 @@ window.CANISVERSE_ARTICLES = [
     "title": "KCHJ oznámil úmrtí Zdeňka Dvořáka",
     "category": "Chovatelství a kluby",
     "topic": "breeding",
-    "breed": "all",
+    "breed": "dachshund",
     "symbol": "Vzpomínka",
     "publishedAt": "2026-11-27",
     "checkedAt": "2026-11-26",
